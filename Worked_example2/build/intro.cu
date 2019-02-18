@@ -68,7 +68,7 @@ int main(int argc, char *argv[])
 
     /* copy input array from host to GPU */
     /* Part 1B: copy host array h_a to device array d_a */
-    cudaMemcpy(h_a, d_a, sz, cudaMemcpyHostToDevice);
+    cudaMemcpy(d_a, h_a, sz, cudaMemcpyHostToDevice);
 
     /* run the kernel on the GPU */
     /* Part 2A: configure and launch kernel (un-comment and complete) */
@@ -82,7 +82,7 @@ int main(int argc, char *argv[])
 
     /* copy the result array back to the host */
     /* Part 1C: copy device array d_a to host array h_out */
-    cudaMemcpy(d_a, h_a, sz, cudaMemcpyDeviceToHost);
+    cudaMemcpy(h_out, d_a, sz, cudaMemcpyDeviceToHost);
 
     checkCUDAError("memcpy");
 
