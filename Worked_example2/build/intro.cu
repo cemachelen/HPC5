@@ -68,7 +68,7 @@ int main(int argc, char *argv[])
 
     /* copy input array from host to GPU */
     /* Part 1B: copy host array h_a to device array d_a */
-    cudaMemcpy( );
+    cudaMemcpy(array_device, array_host, N*sizeof(float), cudaMemcpyHostToDevice);
 
     /* run the kernel on the GPU */
     /* Part 2A: configure and launch kernel (un-comment and complete) */
