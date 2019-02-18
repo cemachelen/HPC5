@@ -1,0 +1,10 @@
+## Hosts assigned to job 911948.1:
+##
+## db12gpu2.arc3.leeds.ac.uk 12 slots
+##
+## Resources granted:
+##
+## h_vmem = 5726623061 (per slot)
+## h_rt   = 00:10:00
+## disk   = 1G (per slot)
+
