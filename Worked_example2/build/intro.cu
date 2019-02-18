@@ -95,7 +95,7 @@ int main(int argc, char *argv[])
 
     /* free device buffer */
     /* Part 1D: free d_a */
-    cudaFree( );
+    cudaFree(d_a);
 
     /* free host buffers */
     free(h_a);
