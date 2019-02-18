@@ -18,6 +18,8 @@ void checkCUDAError(const char*);
 __global__ void negate(int *d_a)
 {
     /* Part 2B: negate an element of d_a */
+    int idx = threadIdx.x;
+    d_a[idx] = ­1 * d_a[idx];    
 }
 
 /* Multi-block version of kernel for part 2C */
@@ -68,13 +70,13 @@ int main(int argc, char *argv[])
 
     /* copy input array from host to GPU */
     /* Part 1B: copy host array h_a to device array d_a */
-    cudaMemcpy(h_a, d_a, sz, cudaMemcpyHostToDevice);
+    cudaMemcpy(d_a, h_a, sz, cudaMemcpyHostToDevice);
 
     /* run the kernel on the GPU */
     /* Part 2A: configure and launch kernel (un-comment and complete) */
-    /* dim3 blocksPerGrid(256,1,1); */
-    /* dim3 threadsPerBlock(256,1,1); */
-    /* negate<<< , >>>( ); */
+    /* dim3 blocksPerGrid(NUM_BLOCKS,1,1); */
+    /* dim3 threadsPerBlock(THREADS_PER_BLOCK,1,1); */
+    /* negate<<<blocksPerGrid,threadsPerBlock >>>(d_a); */
 
     /* wait for all threads to complete and check for errors */
     cudaThreadSynchronize();
@@ -82,7 +84,7 @@ int main(int argc, char *argv[])
 
     /* copy the result array back to the host */
     /* Part 1C: copy device array d_a to host array h_out */
-    cudaMemcpy(d_a, h_a, sz, cudaMemcpyDeviceToHost);
+    cudaMemcpy(h_out, d_a, sz, cudaMemcpyDeviceToHost);
 
     checkCUDAError("memcpy");
 
