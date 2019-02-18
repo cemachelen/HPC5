@@ -17,9 +17,10 @@ void checkCUDAError(const char*);
 /* The actual array negation kernel (basic single block version) */
 __global__ void negate(int *d_a)
 {
+    int idx = threadIdx.x;
+    d_a[idx] = -1 * d_a[idx];
     /* Part 2B: negate an element of d_a */
-    int idx = threadIdx.x;
-    d_a[idx] = ­1 * d_a[idx];    
+       
 }
 
 /* Multi-block version of kernel for part 2C */
@@ -74,9 +75,12 @@ int main(int argc, char *argv[])
 
     /* run the kernel on the GPU */
     /* Part 2A: configure and launch kernel (un-comment and complete) */
-    /* dim3 blocksPerGrid(NUM_BLOCKS,1,1); */
-    /* dim3 threadsPerBlock(THREADS_PER_BLOCK,1,1); */
-    /* negate<<<blocksPerGrid,threadsPerBlock >>>(d_a); */
+
+    /* run the kernel on the GPU */
+    dim3 blocksPerGrid(NUM_BLOCKS,1,1);
+    dim3 threadsPerBlock(THREADS_PER_BLOCK,1,1);
+    negate<<< blocksPerGrid, threadsPerBlock >>>(d_a);
+
 
     /* wait for all threads to complete and check for errors */
     cudaThreadSynchronize();
