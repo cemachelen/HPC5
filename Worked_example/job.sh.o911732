@@ -1,0 +1,16 @@
+## WARNING!
+## The current directory is in your home directory. Please use the high-performance
+## cluster filesystem /nobackup. See documentation for information.
+## WARNING!
+
+## Hosts assigned to job 911732.1:
+##
+## db12gpu4.arc3.leeds.ac.uk 6 slots
+##
+## Resources granted:
+##
+## h_vmem = 11453246122 (per slot)
+## h_rt   = 00:10:00
+## disk   = 1G (per slot)
+
+Max error: 0
