@@ -1,0 +1,12 @@
+## Hosts assigned to job 911790.1:
+##
+## db12gpu4.arc3.leeds.ac.uk 6 slots
+##
+## Resources granted:
+##
+## h_vmem = 11453246122 (per slot)
+## h_rt   = 00:10:00
+## disk   = 1G (per slot)
+
+Max error: 2671
+Max error: 2519
