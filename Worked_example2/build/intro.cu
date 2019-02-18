@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
      * allocate memory on device
      */
     /* Part 1A: allocate device memory */
-    cudaMalloc( );
+    cudaMalloc(&a, N*sizeof(float));
 
     /* initialise host arrays */
     for (i = 0; i < ARRAY_SIZE; i++) {
