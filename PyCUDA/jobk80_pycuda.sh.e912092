@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "pycuda_test.py", line 4, in <module>
+    import pycuda.driver as cuda
+  File "/apps/developers/libraries/python-libs/3.1.0/1/python-3.6.0/lib/python3.6/site-packages/pycuda-2017.1.1-py3.6-linux-x86_64.egg/pycuda/driver.py", line 5, in <module>
+    from pycuda._driver import *  # noqa
+ImportError: libcurand.so.8.0: cannot open shared object file: No such file or directory

@@ -25,7 +25,7 @@ mod = SourceModule("""
 # now the code is compiled and loaded on to the
 # device
 func = mod.get_function("doublify")
-func(a_gpu, block=(4,4,1)
+func(a_gpu, block=(4,4,1))
 #  
 a_doubled = numpy.empty_like(a)
 cuda.memcpy_dtoh(a_doubled, a_gpu)

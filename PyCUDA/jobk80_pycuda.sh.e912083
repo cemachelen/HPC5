@@ -1,0 +1,5 @@
+gnu/native conflicts with loaded module 'intel/17.0.1'
+  File "pycuda_test.py", line 30
+    a_doubled = numpy.empty_like(a)
+            ^
+SyntaxError: invalid syntax
