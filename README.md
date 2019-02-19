@@ -1,6 +1,12 @@
 # HPC 5
 
+My Personal Notes from the Leeds University [HPC5](https://arc.leeds.ac.uk/training/introduction-to-gpu-programming-with-cuda/) training course
+
 Course Link: [goo.gl/NMGpWk](https://docs.google.com/presentation/d/1eIty3x3C57gxsrRLrzbY6iYoVQ397_h2Jn92ZttkKpQ/edit#slide=id.g2fcb30acec_0_0)
+
+The code follows some of the tasks in the course work sheet. Commits every question and bugfix.
+
+:construction: *These are just notes from a course, this is not developed work*  :construction:
 
 ### [General GPU](https://docs.google.com/presentation/d/1ZOhz8HfvGn_va7sUvtn3x6W2f9lflZXgyoW_BTXx7-w/edit#slide=id.p11)
 * As clockspeeds stall best to move to accelerators
@@ -42,3 +48,9 @@ Course Link: [goo.gl/NMGpWk](https://docs.google.com/presentation/d/1eIty3x3C57g
 
 * Compiler requires .cu extension
 * tabs are not accepted
+
+<hr>
+
+# Acknowledgements
+
+The course was from the [ARC Training Course:](https://arc.leeds.ac.uk/training/) [HPC5](https://arc.leeds.ac.uk/training/introduction-to-gpu-programming-with-cuda/), delivered by Martin Callaghan.
